@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/Http/routes.php" line="60" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b524943-4179-421d-9ebe-ca5d5d6da574" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PayController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PayController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-    </list>
+    <list default="true" id="1b524943-4179-421d-9ebe-ca5d5d6da574" name="Default" comment="" />
     <ignored path="laravel5.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -62,8 +58,8 @@
       <file leaf-file-name="PayController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PayController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="538" column="58" selection-start-line="538" selection-start-column="58" selection-end-line="538" selection-end-column="58" />
+            <state relative-caret-position="412">
+              <caret line="537" column="35" selection-start-line="537" selection-start-column="35" selection-end-line="537" selection-end-column="35" />
               <folding>
                 <element signature="e#878#1054#0#PHP" expanded="false" />
                 <element signature="e#3111#3792#0#PHP" expanded="false" />
@@ -603,12 +599,12 @@
       <workItem from="1472288709492" duration="3907000" />
       <workItem from="1472434264131" duration="1919000" />
       <workItem from="1473304797390" duration="1429000" />
-      <workItem from="1473731567388" duration="2185000" />
+      <workItem from="1473731567388" duration="2505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="414696000" />
+    <option name="totallyTimeSpent" value="415016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1021,8 +1017,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PayController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="538" column="58" selection-start-line="538" selection-start-column="58" selection-end-line="538" selection-end-column="58" />
+        <state relative-caret-position="412">
+          <caret line="537" column="35" selection-start-line="537" selection-start-column="35" selection-end-line="537" selection-end-column="35" />
           <folding>
             <element signature="e#878#1054#0#PHP" expanded="false" />
             <element signature="e#3111#3792#0#PHP" expanded="false" />
