@@ -4,7 +4,10 @@
     <bookmark url="file://$PROJECT_DIR$/app/Http/routes.php" line="60" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b524943-4179-421d-9ebe-ca5d5d6da574" name="Default" comment="" />
+    <list default="true" id="1b524943-4179-421d-9ebe-ca5d5d6da574" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PayController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PayController.php" />
+    </list>
     <ignored path="laravel5.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -58,12 +61,12 @@
       <file leaf-file-name="PayController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PayController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="537" column="35" selection-start-line="537" selection-start-column="35" selection-end-line="537" selection-end-column="35" />
+            <state relative-caret-position="-9547">
+              <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
               <folding>
-                <element signature="e#878#1054#0#PHP" expanded="false" />
-                <element signature="e#3111#3792#0#PHP" expanded="false" />
-                <element signature="e#4933#5368#0#PHP" expanded="false" />
+                <element signature="e#316#344#0#PHP" expanded="true" />
+                <marker date="1473736333521" expanded="false" signature="881:1052" placeholder=" 流程： ..." />
+                <marker date="1473736333521" expanded="false" signature="3187:3791" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -599,12 +602,12 @@
       <workItem from="1472288709492" duration="3907000" />
       <workItem from="1472434264131" duration="1919000" />
       <workItem from="1473304797390" duration="1429000" />
-      <workItem from="1473731567388" duration="2505000" />
+      <workItem from="1473731567388" duration="3193000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415016000" />
+    <option name="totallyTimeSpent" value="415704000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1017,12 +1020,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PayController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="537" column="35" selection-start-line="537" selection-start-column="35" selection-end-line="537" selection-end-column="35" />
+        <state relative-caret-position="-9547">
+          <caret line="108" column="8" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="8" />
           <folding>
-            <element signature="e#878#1054#0#PHP" expanded="false" />
-            <element signature="e#3111#3792#0#PHP" expanded="false" />
-            <element signature="e#4933#5368#0#PHP" expanded="false" />
+            <element signature="e#316#344#0#PHP" expanded="true" />
+            <marker date="1473736333521" expanded="false" signature="881:1052" placeholder=" 流程： ..." />
+            <marker date="1473736333521" expanded="false" signature="3187:3791" placeholder="..." />
           </folding>
         </state>
       </provider>
