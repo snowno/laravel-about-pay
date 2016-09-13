@@ -54,7 +54,7 @@ class PayController extends Controller
         $input->SetTime_expire(date("YmdHis", time() + 600));           //订单失效时间（最短失效时间间隔必须大于5分钟）10
         $input->SetGoods_tag("test");                                   //商品标记
         //这里设置支付成功后的回调接口，不能有参数。还有，这里的127.0.0.1是收不到微信后台发出的回调函数的，只能用服务器来测试了。
-        $input->SetNotify_url("http://www.5shifu.com/wxresult");    //接收微信支付异步通知回调地址，通知url必须为直接可访问的url，不能携带参数（有效url）
+        $input->SetNotify_url("http://www.test.com/wxresult");    //接收微信支付异步通知回调地址，通知url必须为直接可访问的url，不能携带参数（有效url）
         $input->SetTrade_type("NATIVE");        //取值如下：JSAPI，NATIVE，APP  (JSAPI--公众号支付、NATIVE--原生扫码支付、APP--app支付)
         $input->SetProduct_id("123456789");     //二维码中包含的商品id
         $result = $notify->GetPayUrl($input);
@@ -107,7 +107,7 @@ class PayController extends Controller
             $result = WxPayApi::refund($input);
         }
 
-        //$_REQUEST["out_trade_no"]= "122531270220150304194108";
+        //$_REQUEST["out_trade_no"]= "12253127022194108";
         ///$_REQUEST["total_fee"]= "1";
         //$_REQUEST["refund_fee"] = "1";
         if(isset($_REQUEST["out_trade_no"]) && $_REQUEST["out_trade_no"] != ""){
@@ -167,13 +167,13 @@ class PayController extends Controller
         $gateway = $gateway->parameterInit($gateway,'alipayTransfer');
 
         //服务器异步通知页面路径
-        $notify_url = "http://test.pay.5shifu.com/transpayNotify";//需http://格式的完整路径，不允许加?id=123这类自定义参数
+        $notify_url = "http://www.test.com/transpayNotify";//需http://格式的完整路径，不允许加?id=123这类自定义参数
 
         //付款账号
-        $email = 'myaccount@qgpic.com';//必填
+        $email = '123@qq.com';//必填
 
         //付款账户名
-        $account_name = '北京奇光影业有限公司';//必填，个人支付宝账号是真实姓名公司支付宝账号是公司名称
+        $account_name = 'xx公司';//必填，个人支付宝账号是真实姓名公司支付宝账号是公司名称
 
         //付款当天日期
         $pay_date = date("Ymd",time());//必填，格式：年[4位]月[2位]日[2位]，如：20100801
@@ -241,7 +241,7 @@ class PayController extends Controller
         $json_obj = json_decode($res,true);*/
 //根据openid和access_token查询用户信息
 //        $access_token = $json_obj['access_token'];
-        /*$access_token = '64gvDRn9Wnkh4ph605biSU9uvCi8bKcVnAOF_Prs0DHvjDnUtov-TDlMrU3Cv5qRKS6t0BKLyjY3ZbRixzc3dNGvhsthspS_UjbfTBKb1pYpx-rrKORKPD_ZVpxyAA9mTMIbACAHAW';
+        /*$access_token = '64gvUtov-TDlMrU3Cv5qRKS6t0BKLyjY3ZbRixzc3dNGvhsthspS_UjbfTBKb1pYpx-rrKORKPD_ZVpxyAA9mTMIbACAHAW';
         $openid = "oFgObwdOb9eIxoJN1lLToPbWuM6Q";
         $get_user_info_url = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
 
@@ -265,7 +265,7 @@ class PayController extends Controller
         $gateway = Omnipay::create('WechatPay_Native');
 
         //所需参数
-        $openid='oFgObwdOb9eIxoJN1lLToPbWuM6Q';//用户唯一标识,上一步授权中获取
+        $openid='oFgObwdOb9eIToPbWuM6Q';//用户唯一标识,上一步授权中获取  //填体现到哪个openid
         $check_name='NO_CHECK';//校验用户姓名选项，NO_CHECK：不校验真实姓名， FORCE_CHECK：强校验真实姓名（未实名认证的用户会校验失败，无法转账），OPTION_CHECK：针对已实名认证的用户才校验真实姓名（未实名认证用户不校验，可以转账成功）
         $re_user_name='测试';//用户姓名
         $amount=700;//企业金额，这里是以分为单位（必须大于100分）
@@ -280,7 +280,7 @@ class PayController extends Controller
            'check_name'  =>  $check_name,
            'desc'  =>  $desc,
            'openid'  =>  $openid,
-           'partner_trade_no'  =>  'qgpic'.rand(10000,99999),
+           'partner_trade_no'  =>  'xxxx'.rand(10000,99999),
            're_user_name'  =>  $re_user_name,
            'spbill_create_ip'  =>  config('wechat.addr'),
        ];
@@ -328,7 +328,7 @@ class PayController extends Controller
         //end add
 
         //操作数据库
-        $pay = new Pay();
+     /*   $pay = new Pay();
         $pay->out_trade_no = $options['out_trade_no'];
         $pay->status = 'NOTPAY';
         $pay->in_trade_no =  mt_rand(1000,9999);
@@ -336,9 +336,9 @@ class PayController extends Controller
         $pay->total_fee = ($options['total_fee']);
         if(Auth::user()) {
             $pay->user_id = Auth::user()->id;
-        }
+        }*/
 //        $pay->save();
-        var_dump($response);exit;
+        // var_dump($response);exit;
         $response->redirect();
     }
 
@@ -483,9 +483,9 @@ class PayController extends Controller
         $gateway = $gateway->parameterInit($gateway,'wechatpayRefund');
 
         $response = $gateway->refund([
-//            'transaction_id' => '4000722001201607290026727128', //The wechat trade no
+//            'transaction_id' => '400072120190026727128', //The wechat trade no
             'out_refund_no' => date('YmdHis').mt_rand(1000, 9999),
-            'out_trade_no' => '1305528801201607291044197165',
+            'out_trade_no' => '1305528801291044197165',
             'total_fee' => 1, //=0.01
             'refund_fee' => 1, //=0.01
         ])->send();
@@ -527,7 +527,7 @@ class PayController extends Controller
         $gateway = $gateway->parameterInit($gateway,'wechatCloseOrder');
 
         $response = $gateway->close([
-            'out_trade_no' =>  '1305528801201608111709509134',
+            'out_trade_no' =>  '130520111709509134',
             'nonce_str'  => config('wechat.nonce_str'),
         ])->send();
         $data = $response->getData();
@@ -536,7 +536,7 @@ class PayController extends Controller
                 $result = '订单成功关闭。';
                 //更新数据库订单状态
                 /*DB::table('pays')
-                    ->where('out_trade_no', '1305528801201608111709509134')
+                    ->where('out_trade_no', '130552880111509134')
                     ->update(array('status' => 'CLOSE'));*/
             }else{
                 $err_mes = $gateway->orderStatus($data['err_code']);
