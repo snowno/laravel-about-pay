@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b524943-4179-421d-9ebe-ca5d5d6da574" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PayController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PayController.php" />
     </list>
     <ignored path="laravel5.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PayController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PayController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PayController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-9547">
@@ -68,6 +68,16 @@
                 <marker date="1473736333521" expanded="false" signature="881:1052" placeholder=" 流程： ..." />
                 <marker date="1473736333521" expanded="false" signature="3187:3791" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,7 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/laravel-omnipay.php" />
         <option value="$PROJECT_DIR$/vendor/lib/notify.php" />
         <option value="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Curl/CurlHandle.php" />
         <option value="$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Request.php" />
@@ -171,6 +180,7 @@
         <option value="$PROJECT_DIR$/.git/config" />
         <option value="$PROJECT_DIR$/config/alipay.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PayController.php" />
+        <option value="$PROJECT_DIR$/config/.gitignore" />
       </list>
     </option>
   </component>
@@ -602,12 +612,12 @@
       <workItem from="1472288709492" duration="3907000" />
       <workItem from="1472434264131" duration="1919000" />
       <workItem from="1473304797390" duration="1429000" />
-      <workItem from="1473731567388" duration="3193000" />
+      <workItem from="1473731567388" duration="3690000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="415704000" />
+    <option name="totallyTimeSpent" value="416201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -650,13 +660,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/omnipay/common/src/Omnipay/Common/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="120" column="27" selection-start-line="120" selection-start-column="27" selection-end-line="120" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/guzzle/guzzle/src/Guzzle/Http/Message/Response.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -1027,6 +1030,14 @@
             <marker date="1473736333521" expanded="false" signature="881:1052" placeholder=" 流程： ..." />
             <marker date="1473736333521" expanded="false" signature="3187:3791" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
