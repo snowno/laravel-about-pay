@@ -147,7 +147,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Overtrue\LaravelWechat\ServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -160,6 +160,9 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Ignited\LaravelOmnipay\LaravelOmnipayServiceProvider::class,
+//        SocialiteProviders\Manager\ServiceProvider::class, // add
+
+
 
     ],
 
@@ -208,8 +211,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
-        'Wechat' => Overtrue\LaravelWechat\Facade::class,
         'Omnipay' => Ignited\LaravelOmnipay\Facades\OmnipayFacade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class, // add
     ],
 
 ];

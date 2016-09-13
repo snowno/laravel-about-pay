@@ -43,6 +43,7 @@ class CurlHandle
     public static function factory(RequestInterface $request)
     {
         $requestCurlOptions = $request->getCurlOptions();
+
         $mediator = new RequestMediator($request, $requestCurlOptions->get('emit_io'));
         $tempContentLength = null;
         $method = $request->getMethod();
@@ -68,9 +69,9 @@ class CurlHandle
             CURLOPT_HTTP_VERSION   => $request->getProtocolVersion() === '1.0'
                 ? CURL_HTTP_VERSION_1_0 : CURL_HTTP_VERSION_1_1,
             // Verifies the authenticity of the peer's certificate
-            CURLOPT_SSL_VERIFYPEER => 1,
+            CURLOPT_SSL_VERIFYPEER => 2,
             // Certificate must indicate that the server is the server to which you meant to connect
-            CURLOPT_SSL_VERIFYHOST => 2
+            CURLOPT_SSL_VERIFYHOST => 2,
         );
 
         if (defined('CURLOPT_PROTOCOLS')) {
@@ -181,7 +182,7 @@ class CurlHandle
                 $curlOptions[$key] = $value;
             }
         }
-
+//        var_dump($curlOptions[CURLOPT_SSL_VERIFYHOST]);exit;
         // Do not set an Accept header by default
         if (!isset($curlOptions[CURLOPT_ENCODING])) {
             $curlOptions[CURLOPT_HTTPHEADER][] = 'Accept:';
@@ -217,7 +218,9 @@ class CurlHandle
             };
             $curlOptions[CURLOPT_NOPROGRESS] = false;
         }
-
+        //add 20166/08/02 16:52 pm
+        $curlOptions[CURLOPT_SSL_VERIFYHOST] = 2;
+        //end add
         curl_setopt_array($handle, $curlOptions);
 
         return new static($handle, $curlOptions);

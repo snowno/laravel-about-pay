@@ -156,6 +156,7 @@ class Factory implements FactoryContract
      */
     public function make($view, $data = [], $mergeData = [])
     {
+
         if (isset($this->aliases[$view])) {
             $view = $this->aliases[$view];
         }

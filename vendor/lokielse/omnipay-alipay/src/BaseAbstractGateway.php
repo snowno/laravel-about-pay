@@ -304,4 +304,21 @@ abstract class BaseAbstractGateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\Alipay\Message\SendGoodsRequest', $parameters);
     }
+
+    //退款
+    /**
+     * @param array $parameters
+     *
+     * @return \Omnipay\AliPay\Message\RefundOrderRequest
+     */
+    public function refund($parameters = array ())
+    {
+        
+        return $this->createRequest('\Omnipay\Alipay\Message\RefundOrderRequest', $parameters);
+    }
+
+    //商家付款
+    public function transfer ($parameters = array()){
+        return $this->createRequest('\Omnipay\Alipay\Message\TransferOrderRequest',$parameters);
+    }
 }

@@ -96,6 +96,7 @@ abstract class AbstractRequest implements RequestInterface
      */
     public function __construct(ClientInterface $httpClient, HttpRequest $httpRequest)
     {
+
         $this->httpClient = $httpClient;
         $this->httpRequest = $httpRequest;
         $this->initialize();
@@ -118,7 +119,6 @@ abstract class AbstractRequest implements RequestInterface
         }
 
         $this->parameters = new ParameterBag;
-
         Helper::initialize($this, $parameters);
 
         return $this;
@@ -195,8 +195,11 @@ abstract class AbstractRequest implements RequestInterface
      */
     public function validate()
     {
+//        var_dump(func_get_args());exit;
         foreach (func_get_args() as $key) {
+
             $value = $this->parameters->get($key);
+//            var_dump($this->parameters);
             if (empty($value)) {
                 throw new InvalidRequestException("The $key parameter is required");
             }
@@ -607,8 +610,9 @@ abstract class AbstractRequest implements RequestInterface
 
     public function send()
     {
-        $data = $this->getData();
 
+        $data = $this->getData();
+//        var_dump($data);exit;
         return $this->sendData($data);
     }
 

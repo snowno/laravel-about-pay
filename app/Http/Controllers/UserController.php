@@ -31,4 +31,10 @@ class UserController extends Controller
         }
 
     }
+
+    public function fb_fan_count($facebook_name){
+        // Example: https://graph.facebook.com/digimantra
+        $data = json_decode(file_get_contents("https://graph.facebook.com/".$facebook_name));
+        echo $data->likes;
+    }
 }

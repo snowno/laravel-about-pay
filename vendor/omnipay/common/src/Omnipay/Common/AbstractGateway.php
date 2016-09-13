@@ -80,8 +80,8 @@ abstract class AbstractGateway implements GatewayInterface
     public function initialize(array $parameters = array())
     {
         $this->parameters = new ParameterBag;
-
         // set default parameters
+//        var_dump($this->getDefaultParameters());
         foreach ($this->getDefaultParameters() as $key => $value) {
             if (is_array($value)) {
                 $this->parameters->set($key, reset($value));
@@ -89,6 +89,7 @@ abstract class AbstractGateway implements GatewayInterface
                 $this->parameters->set($key, $value);
             }
         }
+        
 
         Helper::initialize($this, $parameters);
 
@@ -269,6 +270,8 @@ abstract class AbstractGateway implements GatewayInterface
      */
     protected function createRequest($class, array $parameters)
     {
+//    var_dump($class);exit;
+
         $obj = new $class($this->httpClient, $this->httpRequest);
 
         return $obj->initialize(array_replace($this->getParameters(), $parameters));

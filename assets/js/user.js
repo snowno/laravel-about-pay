@@ -5,4 +5,11 @@ $(function(){
     $('.dropdown-toggle').hover(function(){
         $('.usermes').show();
     })
+
+    $('.scan').mouseover(function(){
+        $('.mark').show();
+    })
+    $('.scan').mouseout(function(){
+        $('.mark').hide();
+    })
 })

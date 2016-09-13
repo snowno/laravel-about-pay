@@ -12,6 +12,10 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
+        '/pay/orderstatus',
+        'wxrefunded',
+        'alipayment',
+        'alipayRefunded',
+        'orderquery',
     ];
 }

@@ -32,7 +32,9 @@ class ParameterBag implements \IteratorAggregate, \Countable
      */
     public function __construct(array $parameters = array())
     {
+
         $this->parameters = $parameters;
+        
     }
 
     /**

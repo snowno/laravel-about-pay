@@ -59,12 +59,14 @@ class Helper
     {
         if (is_array($parameters)) {
             foreach ($parameters as $key => $value) {
+
                 $method = 'set'.ucfirst(static::camelCase($key));
                 if (method_exists($target, $method)) {
                     $target->$method($value);
                 }
             }
         }
+       
     }
 
     /**
@@ -114,5 +116,39 @@ class Helper
         }
 
         return '\\Omnipay\\'.$shortName.'Gateway';
+    }
+
+    public static function array2xml($arr, $root = 'xml')
+    {
+        $xml = "<$root>";
+        foreach ($arr as $key => $val) {
+            if (is_numeric($val)) {
+                $xml .= "<" . $key . ">" . $val . "</" . $key . ">";
+            } else {
+                $xml .= "<" . $key . "><![CDATA[" . $val . "]]></" . $key . ">";
+            }
+        }
+        $xml .= "</xml>";
+
+        return $xml;
+    }
+
+
+    public static function xml2array($xml)
+    {
+        return json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+    }
+
+
+    public static function sign($data, $key)
+    {
+        unset($data['sign']);
+
+        ksort($data);
+
+        $query = urldecode(http_build_query($data));
+        $query .= "&key={$key}";
+//var_dump($query);exit;
+        return strtoupper(md5($query));
     }
 }

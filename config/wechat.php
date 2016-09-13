@@ -1,8 +1,12 @@
 <?php
 return [
-    'use_alias'    => env('WECHAT_USE_ALIAS', false),
-    'app_id'       => env('WECHAT_APPID', 'snowno_coder'), // 必填
-    'secret'       => env('WECHAT_SECRET', 'YourSecret'), // 必填
-    'token'        => env('WECHAT_TOKEN', 'YourToken'),  // 必填
-    'encoding_key' => env('WECHAT_ENCODING_KEY', 'YourEncodingAESKey') // 加密模式需要，其它模式不需要
+    'appid'       => 'your appid here', // 必填
+    'mchid'       => 'your mchid here', // 必填
+    'key'         => 'wechat key here',
+    'notifyurl'   => 'notify url here',
+    'feetype'     => 'CNY',
+    'addr'        => $_SERVER['REMOTE_ADDR'],
+    'apiclientcert' => __DIR__.'/../vendor/lib/apiclient_cert.pem',
+    'apiclientkey' => __DIR__.'/../vendor/lib/apiclient_key.pem',
+    'nonce_str'   => 'test'.rand(100000, 999999),
 ];

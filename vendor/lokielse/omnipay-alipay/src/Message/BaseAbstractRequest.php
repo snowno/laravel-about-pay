@@ -100,4 +100,15 @@ abstract class BaseAbstractRequest extends AbstractRequest
     {
         return $this->getParameter('private_key');
     }
+
+    public function getService()
+    {
+        return $this->getParameter('service');
+    }
+
+
+    public function setService($value)
+    {
+        $this->setParameter('service', $value);
+    }
 }

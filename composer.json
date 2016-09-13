@@ -1,4 +1,4 @@
-{
+    {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
@@ -8,10 +8,10 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
         "laravelcollective/html": "~5.1",
-        "overtrue/laravel-wechat": "2.1.*",
         "ignited/laravel-omnipay": "2.*",
         "lokielse/omnipay-alipay": "dev-master",
-        "lokielse/omnipay-unionpay": "dev-master"
+        "lokielse/omnipay-unionpay": "dev-master",
+        "lokielse/omnipay-wechatpay": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

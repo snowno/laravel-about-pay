@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
 
 //        return view('home')->withArticles(\App\Article::all())->simplePaginate(5);
-        $articles = DB::table('articles')->paginate(10);
+        $articles = DB::table('articles')->paginate(1);
 //        var_dump($article);exit;
         return view('home',compact('articles'));//
     }
