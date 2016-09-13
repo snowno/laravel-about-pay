@@ -2,16 +2,16 @@
 return [
     
     // 合作身份者ID，签约账号，以2088开头由16位纯数字组成的字符串，查看地址：https://b.alipay.com/order/pidAndKey.htm
-    'partner' => '2088121545620653',
+    'partner' => 'your ID',
 
     // 卖家支付宝账号，以2088开头由16位纯数字组成的字符串，一般情况下收款账号就是签约账号
-    'seller_user_id' => '2088121545620653',
+    'seller_user_id' => 'your alipay id',
 
     // MD5密钥，安全检验码，由数字和字母组成的32位字符串，查看地址：https://b.alipay.com/order/pidAndKey.htm
-    'key'    => 'cmjw4atggmx1p9zhxlbn3ke9cn9gfg8i',
+    'key'    => 'your KEY',
 
     // 服务器异步通知页面路径，需http://格式的完整路径，不能加?id=123这类自定义参数,必须外网可以正常访问
-    'notify_url'  => "http://test.pay.5shifu.com/alipayNotify",
+    'notify_url'  => "your url here",
 
     // 签名方式
     'sign_type'  => strtoupper('MD5'),
@@ -32,10 +32,10 @@ return [
     'transport' => 'http',
 
     //支付return_url
-    'returnurl' => 'http://test.pay.5shifu.com/alipayReturn',
+    'returnurl' => 'your reurn url',
 
     //商家邮箱
-    'selleremail' => 'myaccount@qgpic.com',
+    'selleremail' => 'your email',
 
     'addr'        => $_SERVER['REMOTE_ADDR'],
 
